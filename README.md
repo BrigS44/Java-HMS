@@ -1,7 +1,7 @@
 # Java-HMS
 This is Hospital Managment System project. It was made as school project for a grade.
 
-__TECHNOLOGIES __
+**TECHNOLOGIES**
 
 * JAVA 8
 * MySQL DataBase
