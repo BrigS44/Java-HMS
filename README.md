@@ -11,7 +11,7 @@ __SCREENSHOTS OF HMS__
 
 Link to Drive : https://goo.gl/HmaQgF
 
-__Jar file - HMS__
+__JAR FILE - HMS__
 
 Link:  https://goo.gl/B2yvLn
 
