@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="671.0" prefWidth="926.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.DodajPregledController">
+   <children>
+      <AnchorPane fx:id="trakaPane" layoutX="25.0" layoutY="99.0" prefHeight="61.0" prefWidth="880.0" styleClass="trakaPane-pane" />
+      <ImageView fitHeight="304.0" fitWidth="926.0" layoutX="-1.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+         <image>
+            <Image url="@images/tema.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="" minHeight="40.0" minWidth="474.0" prefHeight="43.0" prefWidth="926.0" styleClass="AdminIzbornaTraka-AnchorPane" stylesheets="@dodajpacijent.css">
+         <children>
+            <Button id="nazadBtn" fx:id="nazadBtn" layoutX="2.0" mnemonicParsing="false" onAction="#odbNazad" prefHeight="42.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="" />
+            <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" layoutX="13.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/gobackwhite.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="44.0" layoutY="62.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="54.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pregledwhite.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <GridPane layoutX="46.0" layoutY="203.0" prefHeight="319.0" prefWidth="413.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="159.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="0.0" prefWidth="26.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="271.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="6.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="66.0" minHeight="1.0" prefHeight="8.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="86.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="93.0" minHeight="5.0" prefHeight="6.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="33.0" prefWidth="158.0" text="Naslov" />
+            <Label prefHeight="33.0" prefWidth="158.0" text="Dijagnoza" GridPane.rowIndex="2" />
+            <Label prefHeight="33.0" prefWidth="158.0" text="Opis dijagnoze" GridPane.rowIndex="4" />
+            <Label prefHeight="33.0" prefWidth="158.0" text="Datum pregleda" GridPane.rowIndex="6" />
+            <Label prefHeight="33.0" prefWidth="158.0" text="Vrijeme pregleda" GridPane.rowIndex="8" />
+            <Label prefHeight="33.0" prefWidth="158.0" text="Zakazni termin" GridPane.rowIndex="10" />
+            <TextField fx:id="nazivTF" prefHeight="33.0" prefWidth="257.0" GridPane.columnIndex="2" />
+            <TextField fx:id="dijagnozaTF" prefHeight="33.0" prefWidth="257.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="opisdTF" prefHeight="66.0" prefWidth="257.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="vrijemeTF" prefHeight="33.0" prefWidth="257.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <DatePicker fx:id="odbDatum" prefHeight="33.0" prefWidth="257.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <ComboBox fx:id="zakazanitCB" prefHeight="33.0" prefWidth="255.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <Label prefHeight="33.0" prefWidth="158.0" text="Terapija" GridPane.rowIndex="12" />
+            <TextField fx:id="terapijaTF" prefHeight="33.0" prefWidth="257.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+         </children>
+      </GridPane>
+      <Button id="izvrsiDodaj" fx:id="izvrsiDodajBtn" layoutX="732.0" layoutY="466.0" mnemonicParsing="false" onAction="#spremiPregled" prefHeight="38.0" prefWidth="115.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/add-list.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane layoutX="496.0" layoutY="203.0" prefHeight="238.0" prefWidth="395.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="144.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="117.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="133.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="34.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="123.0" minHeight="4.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="122.0" minHeight="7.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="35.0" prefWidth="146.0" text="Podaci o pacijentu" />
+            <Label prefHeight="35.0" prefWidth="146.0" text="Ime i prezime:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+            <Label prefHeight="35.0" prefWidth="146.0" text="Podaci o liječniku" GridPane.rowIndex="3" />
+            <Label prefHeight="35.0" prefWidth="146.0" text="Dr." textAlignment="RIGHT" GridPane.rowIndex="4" />
+            <Label fx:id="imePlbl" prefHeight="33.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="imeLlbl" prefHeight="36.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="prezimeLlbl" prefHeight="40.0" prefWidth="176.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label GridPane.columnIndex="2" />
+            <Label fx:id="prezimePlbl" prefHeight="33.0" prefWidth="176.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+   <stylesheets>
+      
+      <URL value="@dodajpacijent.css" />
+   </stylesheets>
+</AnchorPane>

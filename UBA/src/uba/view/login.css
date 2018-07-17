@@ -1,0 +1,50 @@
+
+.mainFxmlClass {
+
+}
+.backgorund{
+    
+    -fx-background-color: white;
+   
+}
+.pane{
+    
+    
+    -fx-image: url("images/loginimage.png");
+}
+
+.button{
+    
+    -fx-background-color:#079185;
+    -fx-border-radius: 0px;
+    -fx-width:179px;
+    -fx-height: 104px;
+}
+.button:hover{
+    
+   -fx-background-color:#75b7b2;
+}
+
+ImageView.prijavaIkona{
+    
+    -fx-image:url("images/login4.png");
+}
+
+ImageView.korisnikIkona{
+    
+    -fx-image:url("images/userlogin1.png");
+}
+
+ImageView.lozinkaIkona{
+    
+    -fx-image:url("images/locklogin1.png");
+}
+.text-field{
+    
+    -fx-border-radius: 0;
+    -fx-border:2px;
+    -fx-border-color: #079185;
+    -fx-font-family: Tahoma;
+    -fx-font-size: 12pt;
+    -fx-font-color: #079185;
+}

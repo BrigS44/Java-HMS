@@ -1,0 +1,52 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.backgorund{
+    
+     -fx-background-image: url("images/tema.png");
+}
+
+.AdminIzbornaTraka-AnchorPane{
+    
+    -fx-background-color:#079185;
+}
+
+.osobneInfo-Pane{
+    
+    -fx-border: 5px;
+    -fx-border-color: #079185;
+}
+
+.okvir-AnchorPane{
+    
+     -fx-background-color:#079185;
+}
+
+.label{
+    
+    -fx-border-radius: 0;
+    -fx-border:0px;
+    -fx-font-family: "Candra";
+    -fx-font-size: 9pt;
+    -fx-text-fill:#079185;
+}
+
+.button{
+    
+    -fx-background-color:#079185;
+    -fx-border-radius: 0px;
+}
+.button:hover{
+    
+   -fx-background-color:#75b7b2;
+}
+
+
+
+    
+

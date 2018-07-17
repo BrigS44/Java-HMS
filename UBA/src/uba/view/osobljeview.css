@@ -1,0 +1,77 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.backgorund{
+    
+     -fx-background-image: url("images/tema.png");
+}
+
+
+.AdminIzbornaTraka-AnchorPane{
+    
+    -fx-background-color:#079185;
+}
+
+.text-field{
+    
+    -fx-border-radius: 0;
+    -fx-border:0 1 00;
+    -fx-font-family:"Candara";
+    -fx-font-size: 9pt;
+    -fx-text-fill:  #079185;
+}
+
+.trakaPane-pane{
+    
+    -fx-background-color: #0ba895;
+}
+
+.label{
+    
+    -fx-font-size: 10pt;
+    -fx-font-family:"Candara";
+    -fx-text-fill: #079185;
+}
+
+.button{
+    
+    -fx-background-color:#079185;
+    -fx-border-radius: 0px;
+}
+.button:hover{
+    
+   -fx-background-color:#75b7b2;
+}
+.combo-box{
+    
+   
+    -fx-text-fill: #079185;
+    
+}
+.combo-box-popup .list-view {
+    -fx-color: -fx-base;
+    -fx-background-color:
+        derive(-fx-color,-40%),
+        derive(-fx-color,100%),
+        linear-gradient(to bottom, derive(-fx-color, 15%) 0%, derive(-fx-color, 40%) 15%, derive(-fx-color,55%) 75%, derive(-fx-color,15%) 100%);
+  
+   -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.333333em 0.333333em 0.666667em 0.083333em; 
+   
+}.combo-box-popup .list-view .list-cell:filled {
+   
+    -fx-text-fill: #079185;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color:#75b7b2 ;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #079185;
+}

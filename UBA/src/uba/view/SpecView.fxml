@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="490.0" prefWidth="765.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.SpecViewController">
+    <stylesheets>
+        <URL value="@osobljeview.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="253.0" fitWidth="765.0" layoutX="1.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+         <image>
+            <Image url="@images/tema.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="trakaPane" layoutX="14.0" layoutY="103.0" prefHeight="61.0" prefWidth="362.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+      <AnchorPane id="" fx:id="AdminIzbornaTraka" minHeight="40.0" prefHeight="43.0" prefWidth="766.0" styleClass="AdminIzbornaTraka-AnchorPane">
+         <children>
+            <Button fx:id="nazadBtn" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#odbNazad" prefHeight="41.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+               <graphic>
+                  <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/gobackwhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="27.0" layoutY="66.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="65.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pulse.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <GridPane layoutX="407.0" layoutY="132.0" prefHeight="124.0" prefWidth="352.0">
+         <children>
+            <Label prefHeight="33.0" prefWidth="111.0" text="Naziv:" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" fx:id="x1" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x2" />
+               </textFill>
+            </Label>
+            <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="ID:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="getID" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="updateNaziv" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="5.0" prefWidth="5.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="36.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label font="$x1" layoutX="435.0" layoutY="103.0" prefHeight="35.458099365234375" prefWidth="194.0" text="Ažuriraj podatke:" textFill="$x2" />
+      <Button id="nazadBtn" fx:id="dodajSpec" layoutX="639.0" layoutY="280.0" mnemonicParsing="false" onAction="#odbDodajSpec" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+         <graphic>
+            <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/add-list.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button id="nazadBtn" fx:id="obrisiSpec" layoutX="538.0" layoutY="281.0" mnemonicParsing="false" onAction="#brisiSpec" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+         <graphic>
+            <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/rubbish-bin.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button id="nazadBtn" fx:id="izvrsiUpdateBtn" layoutX="435.0" layoutY="282.0" mnemonicParsing="false" onAction="#azurirajSpec" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+         <graphic>
+            <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pencil-edit-button.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TableView fx:id="specID" layoutX="14.0" layoutY="197.0" prefHeight="204.0" prefWidth="362.0">
+        <columns>
+          <TableColumn fx:id="IDspec" prefWidth="108.0" text="ID" />
+          <TableColumn fx:id="naziv" prefWidth="253.0" text="Naziv specijalizacije" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

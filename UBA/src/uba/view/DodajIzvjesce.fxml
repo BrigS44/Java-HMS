@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="504.0" styleClass="mainFxmlClass" stylesheets="@dodajpacijent.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.DodajIzvjesceController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="3.0" layoutY="11.0" minWidth="488.0" prefHeight="611.0" prefWidth="498.0" styleClass="mainFxmlClass">
+         <children>
+            <AnchorPane fx:id="trakaPane" layoutX="14.0" layoutY="84.0" prefHeight="61.0" prefWidth="471.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+            <ImageView fitHeight="169.0" fitWidth="498.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+               <image>
+                  <Image url="@images/tema.png" />
+               </image>
+            </ImageView>
+            <AnchorPane id="" layoutX="-3.0" layoutY="-12.0" minHeight="40.0" minWidth="474.0" prefHeight="43.0" prefWidth="504.0" styleClass="AdminIzbornaTraka-AnchorPane">
+               <children>
+                  <Button id="nazadBtn" fx:id="nazadBtn" mnemonicParsing="false" onAction="#odbNazad" prefHeight="42.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                     <graphic>
+                        <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/gobackwhite.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="33.0" layoutY="48.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="49.0" layoutX="16.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/izvjescewhite.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="25.0" layoutY="172.0" prefHeight="31.0" prefWidth="132.0" text="Vrsta izvješća">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x11" />
+               </textFill>
+            </Label>
+            <Label layoutX="25.0" layoutY="216.0" prefHeight="31.0" prefWidth="132.0" text="Naslov">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x111" />
+               </textFill>
+            </Label>
+            <Label layoutX="25.0" layoutY="259.0" prefHeight="31.0" prefWidth="132.0" text="Opis">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x112" />
+               </textFill>
+            </Label>
+            <Label layoutX="25.0" layoutY="303.0" prefHeight="31.0" prefWidth="132.0" text="Datum">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x1121" />
+               </textFill>
+            </Label>
+            <Label layoutX="25.0" layoutY="344.0" prefHeight="31.0" prefWidth="132.0" text="Vrijeme">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x11211" />
+               </textFill>
+            </Label>
+            <Label layoutX="25.0" layoutY="387.0" prefHeight="31.0" prefWidth="132.0" text="Liječnik">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x112111" />
+               </textFill>
+            </Label>
+            <Label layoutX="25.0" layoutY="429.0" prefHeight="31.0" prefWidth="132.0" text="Pacijent">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x1121111" />
+               </textFill>
+            </Label>
+            <TextField fx:id="nazivTF" layoutX="201.0" layoutY="216.0" prefHeight="31.0" prefWidth="246.0" />
+            <TextField fx:id="opisTF" layoutX="201.0" layoutY="259.0" prefHeight="31.0" prefWidth="246.0" />
+            <TextField fx:id="vrijemeTF" layoutX="201.0" layoutY="344.0" prefHeight="31.0" prefWidth="246.0" />
+            <DatePicker fx:id="odbDatum" layoutX="201.0" layoutY="303.0" prefHeight="31.0" prefWidth="246.0" />
+            <Button id="izvrsiDodaj" fx:id="izvrsiDodajBtn" layoutX="25.0" layoutY="495.0" mnemonicParsing="false" onAction="#spremiIzvjesce" prefHeight="38.0" prefWidth="115.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/add-list.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ComboBox fx:id="lijecnikCB" layoutX="201.0" layoutY="385.0" prefHeight="31.0" prefWidth="246.0" />
+            <ComboBox fx:id="pacijentCB" layoutX="201.0" layoutY="428.0" prefHeight="31.0" prefWidth="189.0" />
+            <ComboBox fx:id="vrstaCB" layoutX="201.0" layoutY="172.0" prefHeight="31.0" prefWidth="246.0" />
+            <Button fx:id="dodajPacijent" layoutX="395.0" layoutY="428.0" mnemonicParsing="false" onAction="#odbDodajPacijent" prefHeight="31.0" prefWidth="49.0">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/family.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <stylesheets>
+            <URL value="@dodajpacijent.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

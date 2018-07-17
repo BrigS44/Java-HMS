@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="638.0" prefWidth="951.0" styleClass="mainFxmlClass" stylesheets="@osobljeview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.PregledViewController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="-3.0" prefHeight="538.0000779296824" prefWidth="810.0000858306885" styleClass="mainFxmlClass">
+         <children>
+            <ImageView fitHeight="312.0257024150625" fitWidth="951.0000610351562" layoutX="0.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+               <image>
+                  <Image url="@images/tema.png" />
+               </image>
+            </ImageView>
+            <AnchorPane id="" fx:id="AdminIzbornaTraka" layoutX="0.0" layoutY="0.0" minHeight="40.0" prefHeight="43.0" prefWidth="950.608642578125" styleClass="AdminIzbornaTraka-AnchorPane">
+               <children>
+                  <Button fx:id="nazadBtn" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#odbNazad" prefHeight="41.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                     <graphic>
+                        <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/gobackwhite.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <AnchorPane layoutX="599.0" layoutY="55.0" prefHeight="496.0" prefWidth="352.0" styleClass="mainFxmlClass">
+                     <children>
+                        <GridPane layoutX="-4.0" layoutY="28.0" prefHeight="312.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="111.0" text="Naslov" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="14.0" fx:id="x1" />
+                                 </font>
+                                 <textFill>
+                                    <Color blue="0.522" green="0.569" red="0.027" fx:id="x2" />
+                                 </textFill>
+                              </Label>
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Dijagnoza" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Opis dijagnoze:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Datum:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Vrijeme:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="ID" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="idTF" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <TextField fx:id="nazivTF" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <TextField fx:id="dijagnozaTF" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <TextField fx:id="opisdTF" prefHeight="58.0" prefWidth="186.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <TextField fx:id="datumTF" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <TextField fx:id="vrijemeTF" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <TextField fx:id="terapijaTF" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Terapija:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Zakazani termin:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <ComboBox fx:id="zakazanitCB" prefHeight="28.0" prefWidth="186.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="35.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="111.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="5.0" prefWidth="5.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="36.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <Label font="$x1" layoutX="35.0" layoutY="14.0" prefHeight="35.458099365234375" prefWidth="194.0" text="Ažuriraj podatke:" textFill="$x2" />
+                        <Button id="nazadBtn" fx:id="izvrsiUpdateBtn" layoutX="35.0" layoutY="351.0" mnemonicParsing="false" onAction="#azurirajPregled" prefHeight="36.0" prefWidth="64.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                           <graphic>
+                              <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/pencil-edit-button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="nazadBtn" fx:id="brisiPregBtn" layoutX="112.0" layoutY="350.0" mnemonicParsing="false" onAction="#brisiPregled" prefHeight="36.0" prefWidth="64.0" styleClass="AdminIzbornaTraka-AnchorPane" text="" AnchorPane.leftAnchor="112.0">
+                           <graphic>
+                              <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/rubbish-bin.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="nazadBtn" fx:id="dodajPregled" layoutX="183.0" layoutY="351.0" mnemonicParsing="false" onAction="#odbDodajPregled" prefHeight="36.0" prefWidth="64.0" styleClass="AdminIzbornaTraka-AnchorPane" text="" AnchorPane.leftAnchor="183.0">
+                           <graphic>
+                              <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/add-list.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="nazadBtn" fx:id="ZTview" layoutX="255.0" layoutY="350.0" mnemonicParsing="false" onAction="#odbZT" prefHeight="36.0" prefWidth="64.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                           <graphic>
+                              <ImageView fx:id="refreshP2" fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/calendarzt.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="11.0" layoutY="56.0" prefHeight="490.0" prefWidth="580.0">
+               <children>
+                  <AnchorPane fx:id="trakaPane" layoutX="1.0" layoutY="50.0" prefHeight="61.0" prefWidth="579.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+                  <Pane layoutX="14.0" layoutY="13.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="61.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/pregledwhite.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ScrollPane layoutX="1.0" layoutY="135.0" prefHeight="350.0" prefViewportHeight="348.0" prefViewportWidth="579.0" prefWidth="580.0">
+                     <content>
+                        <TableView fx:id="pregledID" layoutX="1.0" layoutY="135.0" prefHeight="348.0" prefWidth="908.0">
+                          <columns>
+                            <TableColumn fx:id="IDpregled" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="nazivTbl" prefWidth="75.0" text="Naziv " />
+                              <TableColumn fx:id="dijagnozaTbl" prefWidth="75.0" text="Dijagnoza" />
+                              <TableColumn fx:id="opisdTbl" prefWidth="75.0" text="Opis dijagnoze" />
+                              <TableColumn fx:id="datumpTbl" prefWidth="75.0" text="Datum pregleda" />
+                              <TableColumn fx:id="vrijemepTbl" prefWidth="75.0" text="Vrijeme pregleda" />
+                              <TableColumn fx:id="terapijaTbl" prefWidth="75.0" text="Terapija" />
+                              <TableColumn fx:id="idZakazanoTbl" prefWidth="75.0" text="Zakazani termin" />
+                              <TableColumn fx:id="obavljenoTbl" prefWidth="75.0" text="Obavljeno" />
+                              <TableColumn prefWidth="75.0" text="Pacijent">
+                                 <columns>
+                                    <TableColumn fx:id="imepTbl" prefWidth="75.0" text="Ime " />
+                                    <TableColumn fx:id="prezimepTbl" prefWidth="75.0" text="Prezime " />
+                                 </columns>
+                              </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Liječnik">
+                                 <columns>
+                                    <TableColumn fx:id="imelTbl" prefWidth="75.0" text="Ime " />
+                                    <TableColumn fx:id="prezimelTbl" prefWidth="75.0" text="Prezime " />
+                                 </columns>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

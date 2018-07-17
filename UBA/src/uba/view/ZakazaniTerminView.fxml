@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="638.0" prefWidth="951.0" stylesheets="@osobljeview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.ZakazaniTerminViewController">
+   <children>
+      <ImageView fitHeight="312.0257024150625" fitWidth="951.0000610351562" layoutX="5.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+         <image>
+            <Image url="@images/tema.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="" fx:id="AdminIzbornaTraka" minHeight="40.0" prefHeight="43.0" prefWidth="956.0" styleClass="AdminIzbornaTraka-AnchorPane">
+         <children>
+            <Button fx:id="nazadBtn" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#odbNazad" prefHeight="41.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+               <graphic>
+                  <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/gobackwhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <AnchorPane layoutX="599.0" layoutY="55.0" prefHeight="496.0" prefWidth="352.0" styleClass="mainFxmlClass">
+               <children>
+                  <GridPane layoutX="2.0" layoutY="76.0" prefHeight="303.9999000000025" prefWidth="348.70709228515625">
+                     <children>
+                        <Label prefHeight="33.0" prefWidth="111.0" text="Vrsta:" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma Bold" size="14.0" fx:id="x1" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.522" green="0.569" red="0.027" fx:id="x2" />
+                           </textFill>
+                        </Label>
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Naziv:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Datum:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Vrijeme:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Liječnik:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Pacijent:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="ID:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" />
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="Obavljeno" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="idTF" GridPane.columnIndex="3" />
+                        <TextField fx:id="nazivTF" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="datumTF" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="vrijemeTF" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="lijecnikCB" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="pacijentCB" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <ComboBox fx:id="vrstaCB" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="jeLiCB" prefHeight="25.0" prefWidth="184.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="35.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="111.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="5.0" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="36.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Button id="nazadBtn" fx:id="izvrsiUpdateBtn" layoutX="26.0" layoutY="363.0" mnemonicParsing="false" onAction="#azurirajZakazani" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                     <graphic>
+                        <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/pencil-edit-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button id="nazadBtn" fx:id="brisiZTBtn" layoutX="131.0" layoutY="363.0" mnemonicParsing="false" onAction="#brisiZakazani" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="" AnchorPane.leftAnchor="131.0">
+                     <graphic>
+                        <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/rubbish-bin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Label font="$x1" layoutX="26.0" layoutY="40.0" prefHeight="35.458099365234375" prefWidth="194.0" text="Ažuriraj podatke:" textFill="$x2" />
+                  <Button id="nazadBtn" fx:id="dodajZT" layoutX="229.0" layoutY="363.0" mnemonicParsing="false" onAction="#odbDodajZT" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="" AnchorPane.leftAnchor="229.0">
+                     <graphic>
+                        <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/add-list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trakaPane" layoutX="14.0" layoutY="100.0" prefHeight="61.0" prefWidth="570.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane">
+         <children>
+            <Pane layoutX="13.0" layoutY="-35.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="65.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/calendarzt.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="14.0" layoutY="180.0" prefViewportHeight="360.0" prefViewportWidth="570.0">
+         <content>
+            <TableView fx:id="ztID" layoutX="14.0" layoutY="180.0" prefHeight="360.0" prefWidth="570.0">
+              <columns>
+                <TableColumn fx:id="IDzt" prefWidth="34.0" text="ID" />
+                <TableColumn fx:id="nazivTbl" prefWidth="95.0" text="Naziv" />
+                  <TableColumn fx:id="vrstaTbl" prefWidth="104.0" text="Vrsta pregleda" />
+                  <TableColumn fx:id="datumTbl" prefWidth="115.0" text="Datum pregleda" />
+                  <TableColumn fx:id="vrijemeTbl" prefWidth="108.0" text="Vrijeme pregleda" />
+                  <TableColumn fx:id="lijecnikTbl" prefWidth="75.0" text="Liječnik" />
+                  <TableColumn fx:id="pacijentTbl" prefWidth="75.0" text="Pacijent" />
+                  <TableColumn fx:id="obavljenoTbl" prefWidth="75.0" text="Pregledan/na čekanju" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

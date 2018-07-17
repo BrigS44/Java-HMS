@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="490.0" prefWidth="765.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.OdjeliViewController">
+    <stylesheets>
+        <URL value="@osobljeview.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="765.0" styleClass="mainFxmlClass">
+         <children>
+            <AnchorPane id="" fx:id="AdminIzbornaTraka" layoutX="0.0" layoutY="0.0" minHeight="40.0" prefHeight="43.0" prefWidth="765.0" styleClass="AdminIzbornaTraka-AnchorPane">
+               <children>
+                  <Button fx:id="nazadBtn" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#odbNazad" prefHeight="41.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                     <graphic>
+                        <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/gobackwhite.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="11.0" layoutY="56.0" prefHeight="361.0" prefWidth="364.0">
+               <children>
+                  <AnchorPane fx:id="trakaPane" layoutX="1.0" layoutY="50.0" prefHeight="59.0" prefWidth="367.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+                  <Pane layoutX="14.0" layoutY="13.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+                     <children>
+                        <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="11.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/odjeliwhite.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="395.0" layoutY="53.0" prefHeight="440.0" prefWidth="362.0" styleClass="mainFxmlClass">
+               <children>
+                  <ImageView fitHeight="250.0" fitWidth="810.0" layoutX="-395.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+                     <image>
+                        <Image url="@images/tema.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane layoutX="2.0" layoutY="114.0" prefHeight="124.0" prefWidth="352.0">
+                     <children>
+                        <Label prefHeight="33.0" prefWidth="111.0" text="Naziv:" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Tahoma Bold" size="14.0" fx:id="x1" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.522" green="0.569" red="0.027" fx:id="x2" />
+                           </textFill>
+                        </Label>
+                        <Label font="$x1" prefHeight="33.0" prefWidth="111.0" text="ID:" textAlignment="RIGHT" textFill="$x2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="getID" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="updateNaziv" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="35.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="111.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="5.0" prefWidth="5.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="36.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Button id="nazadBtn" fx:id="izvrsiUpdateBtn" layoutX="32.0" layoutY="261.0" mnemonicParsing="false" onAction="#azurirajOdjel" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                     <graphic>
+                        <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/pencil-edit-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button id="nazadBtn" fx:id="obrisiOdjel" layoutX="133.0" layoutY="261.0" mnemonicParsing="false" onAction="#brisiOdjel" prefHeight="36.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="" AnchorPane.leftAnchor="133.0">
+                     <graphic>
+                        <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/rubbish-bin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Label font="$x1" layoutX="23.0" layoutY="87.0" prefHeight="35.458099365234375" prefWidth="194.0" text="Ažuriraj podatke:" textFill="$x2" />
+                  <Button id="nazadBtn" fx:id="dodajOdjel" layoutX="238.0" layoutY="261.0" mnemonicParsing="false" onAction="#odbDodajOdjel" prefHeight="33.0" prefWidth="91.0" styleClass="AdminIzbornaTraka-AnchorPane" text="" AnchorPane.leftAnchor="238.0">
+                     <graphic>
+                        <ImageView fitHeight="24.45809468082846" fitWidth="24.50800895690918" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/add-list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <ScrollPane layoutX="-383.0" layoutY="138.0" prefViewportHeight="223.0" prefViewportWidth="362.0">
+                     <content>
+                        <TableView fx:id="odjeliID" layoutX="-383.0" layoutY="138.0" prefHeight="223.0" prefWidth="362.0">
+                          <columns>
+                            <TableColumn fx:id="IDodjel" prefWidth="109.0" text="ID" />
+                            <TableColumn fx:id="naziv" prefWidth="252.0" text="Naziv odjela" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

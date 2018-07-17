@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="411.0" prefWidth="482.0" styleClass="mainFxmlClass" stylesheets="@dodajpacijent.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.DodajOdjelController">
+    
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-7.0" layoutY="-1.0" minWidth="488.0" prefHeight="410.0" prefWidth="482.0" styleClass="mainFxmlClass">
+         <children>
+            <AnchorPane fx:id="trakaPane" layoutX="18.0" layoutY="98.0" prefHeight="61.0" prefWidth="459.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+            <ImageView fitHeight="166.0" fitWidth="482.0" layoutX="7.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+               <image>
+                  <Image url="@images/tema.png" />
+               </image>
+            </ImageView>
+            <Button id="izvrsiDodaj" fx:id="izvrsiDodajBtn" layoutX="26.0" layoutY="278.0" mnemonicParsing="false" onAction="#spremiOdjel" prefHeight="38.0" prefWidth="115.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+               <graphic>
+                  <ImageView fitHeight="31.00002670288086" fitWidth="31.00002670288086" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/add-list.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="26.0" layoutY="208.0" prefHeight="33.0" prefWidth="132.0" text="Naziv odjela:">
+               <font>
+                  <Font name="Tahoma Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <Color blue="0.522" green="0.569" red="0.027" fx:id="x11" />
+               </textFill>
+            </Label>
+            <Pane layoutX="37.0" layoutY="61.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="62.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/odjeliwhite.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <AnchorPane id="" layoutX="7.0" layoutY="-2.0" minHeight="40.0" minWidth="474.0" prefHeight="43.0" prefWidth="482.0" styleClass="AdminIzbornaTraka-AnchorPane">
+               <children>
+                  <Button id="nazadBtn" fx:id="nazadBtn" layoutX="2.0" mnemonicParsing="false" onAction="#odbNazad" prefHeight="42.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+                     <graphic>
+                        <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/gobackwhite.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="nazivTxt" layoutX="197.0" layoutY="206.0" prefHeight="38.0" prefWidth="238.0" />
+         </children>
+         <stylesheets>
+            <URL value="@dodajpacijent.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="782.000199999995" styleClass="mainFxmlClass, pane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="uba.kontroler.LoginController">
+  <children>
+    <Pane id="" layoutX="0.0" layoutY="3.0" prefHeight="461.0000999999975" prefWidth="320.0" styleClass="pane">
+      <children>
+        <ImageView fx:id="loginSlika" fitHeight="408.7999760338755" fitWidth="314.9999694824219" layoutX="5.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" styleClass="pane">
+          <image>
+            <Image url="@../../../../../../Desktop/java/loginimage.png" />
+          </image>
+        </ImageView>
+        <Separator layoutX="317.0" layoutY="0.0" orientation="VERTICAL" prefHeight="468.0" styleClass="pane" />
+      </children>
+    </Pane>
+    <ImageView fx:id="prijavaIkona" fitHeight="155.0" fitWidth="155.0" layoutX="501.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" styleClass="prijavaIkona">
+      <image>
+        <Image url="@../../../../../../Desktop/java/login4.png" />
+      </image>
+    </ImageView>
+    <TextField fx:id="korImeTxt" layoutX="458.0" layoutY="212.0" prefHeight="45.0" prefWidth="257.0" />
+    <PasswordField fx:id="lozinkaTxt" layoutX="458.0" layoutY="275.0" prefHeight="45.0" prefWidth="257.0" />
+    <ImageView fx:id="korisnikIkona" fitHeight="38.000099999997474" fitWidth="50.66680127156573" layoutX="403.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" styleClass="korisnikIkona">
+      <image>
+        <Image url="@../../../../../../Desktop/java/userlogin1.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="lozinkaIkona" fitHeight="38.000209020531834" fitWidth="31.666841506958008" layoutX="406.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" styleClass="lozinkaIkona">
+      <image>
+        <Image url="@../../../../../../Desktop/java/locklogin1.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="prijavaBtn" layoutX="458.0" layoutY="340.0" mnemonicParsing="false" onAction="#prijavise" prefHeight="52.0" prefWidth="257.0" text="Prijava" textAlignment="CENTER" textFill="WHITE">
+      <font>
+        <Font name="Tahoma Bold" size="14.0" />
+      </font>
+    </Button>
+    <Label fx:id="statusLbl" layoutX="458.0" layoutY="405.0" prefHeight="38.000091552734375" prefWidth="257.0" text="" textFill="#009918">
+      <font>
+        <Font name="Tahoma Bold" size="12.0" />
+      </font>
+    </Label>
+  </children>
+  <stylesheets>
+    <URL value="@login.css" />
+  </stylesheets>
+</AnchorPane>

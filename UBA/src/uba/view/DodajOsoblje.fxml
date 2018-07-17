@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="693.0" prefWidth="831.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.DodajOsobljeController">
+    <stylesheets>
+        
+      <URL value="@dodajpacijent.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="trakaPane" layoutX="15.0" layoutY="107.0" prefHeight="61.0" prefWidth="808.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+      <Pane layoutX="34.0" layoutY="70.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="40.0" layoutX="19.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/personalwhite.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="274.29387308404523" fitWidth="836.0" layoutX="1.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+         <image>
+            <Image url="@images/tema.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="" minHeight="40.0" minWidth="787.0" prefHeight="43.0" prefWidth="837.0" styleClass="AdminIzbornaTraka-AnchorPane" stylesheets="@dodajpacijent.css">
+         <children>
+            <Button id="nazadBtn" fx:id="nazadBtn" mnemonicParsing="false" onAction="#odbNazad" prefHeight="42.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+               <graphic>
+                  <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/gobackwhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="15.0" layoutY="196.0" prefHeight="28.0" prefWidth="122.0" text="Ime" />
+      <Label layoutX="15.0" layoutY="238.0" prefHeight="28.0" prefWidth="122.0" text="Prezime" />
+      <Label layoutX="15.0" layoutY="322.0" prefHeight="28.0" prefWidth="122.0" text="Telefon" />
+      <Label layoutX="15.0" layoutY="280.0" prefHeight="28.0" prefWidth="122.0" text="Spol" />
+      <Label layoutX="14.0" layoutY="440.0" prefHeight="28.0" prefWidth="122.0" text="Datum rođenja" />
+      <Label layoutX="14.0" layoutY="486.0" prefHeight="28.0" prefWidth="122.0" text="JMBG" />
+      <Label layoutX="15.0" layoutY="403.0" prefHeight="28.0" prefWidth="122.0" text="Email" />
+      <Label layoutX="15.0" layoutY="361.0" prefHeight="28.0" prefWidth="122.0" text="Adresa" />
+      <TextField fx:id="imeTF" layoutX="156.0" layoutY="196.0" prefHeight="28.0" prefWidth="200.0" />
+      <TextField fx:id="prezimeTF" layoutX="156.0" layoutY="238.0" prefHeight="28.0" prefWidth="200.0" />
+      <TextField fx:id="telTF" layoutX="156.0" layoutY="322.0" prefHeight="28.0" prefWidth="200.0" />
+      <TextField fx:id="adresaTF" layoutX="156.0" layoutY="361.0" prefHeight="28.0" prefWidth="200.0" />
+      <TextField fx:id="emailTF" layoutX="156.0" layoutY="403.0" prefHeight="28.0" prefWidth="200.0" />
+      <TextField fx:id="jmbgTF" layoutX="156.0" layoutY="486.0" prefHeight="28.0" prefWidth="200.0" />
+      <DatePicker fx:id="odbRodj" layoutX="156.0" layoutY="440.0" prefHeight="28.0" prefWidth="200.0" AnchorPane.bottomAnchor="225.29385375976562" />
+      <Label layoutX="408.0" layoutY="285.0" prefHeight="28.0" prefWidth="146.0" text="Odjel" />
+      <Label layoutX="408.0" layoutY="322.0" prefHeight="28.0" prefWidth="146.0" text="Datum zaposlenja" />
+      <Label layoutX="408.0" layoutY="243.0" prefHeight="28.0" prefWidth="146.0" text="Specijalizacija" />
+      <Label layoutX="408.0" layoutY="201.0" prefHeight="28.0" prefWidth="146.0" text="Obrazovanje" />
+      <Label layoutX="408.0" layoutY="402.0" prefHeight="28.0" prefWidth="146.0" text="Tip korisnika" />
+      <Label layoutX="408.0" layoutY="486.0" prefHeight="28.0" prefWidth="146.0" text="Lozinka" />
+      <Label layoutX="408.0" layoutY="444.0" prefHeight="28.0" prefWidth="146.0" text="Korisničko ime" />
+      <TextField fx:id="lozinkaTF" layoutX="577.0" layoutY="484.0" prefHeight="28.0" prefWidth="200.0" />
+      <TextField fx:id="korImeTF" layoutX="577.0" layoutY="445.0" prefHeight="28.0" prefWidth="200.0" />
+      <TextField fx:id="sssTF" layoutX="577.0" layoutY="201.0" prefHeight="28.0" prefWidth="200.0" />
+      <ComboBox fx:id="specCB" layoutX="577.0" layoutY="242.0" prefHeight="28.0" prefWidth="200.0" />
+      <ComboBox fx:id="odjelCB" layoutX="577.0" layoutY="284.0" prefHeight="28.0" prefWidth="200.0" />
+      <DatePicker fx:id="odbUposlen" layoutX="577.0" layoutY="322.0" prefHeight="28.0" prefWidth="200.0" />
+      <Button id="izvrsiDodaj" fx:id="izvrsiDodajBtn" layoutX="408.0" layoutY="536.0" mnemonicParsing="false" onAction="#spremiOsoblje" prefHeight="38.0" prefWidth="115.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+         <graphic>
+            <ImageView fitHeight="31.00002670288086" fitWidth="31.00002670288086" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/add-list.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="tipCB" layoutX="577.0" layoutY="402.0" prefHeight="28.0" prefWidth="200.0" />
+      <ComboBox fx:id="spolCB" layoutX="156.0" layoutY="280.0" prefHeight="28.0" prefWidth="200.0" />
+      <Label layoutX="408.0" layoutY="361.0" prefHeight="28.0" prefWidth="146.0" text="Placa" />
+      <TextField fx:id="placaTF" layoutX="577.0" layoutY="361.0" prefHeight="28.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

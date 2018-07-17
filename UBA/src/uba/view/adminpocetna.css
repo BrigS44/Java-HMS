@@ -1,0 +1,35 @@
+
+.mainFxmlClass {
+
+}
+.backgorund{
+    
+     -fx-background-image: url("images/tema.png");
+}
+
+.button{
+    
+    -fx-background-color:#079185;
+    -fx-border-radius: 0px;
+    -fx-width:179px;
+    -fx-height: 104px;
+}
+.button:hover{
+    
+   -fx-background-color:#75b7b2;
+}
+.AdminIzbornaTraka-AnchorPane{
+    
+    -fx-background-color:#079185;
+}
+
+.IzbornikKocka-Pane{
+    
+    -fx-background-color: #0ba895;
+}
+.label{
+    
+    -fx-font-size: 11pt;
+    -fx-font-family:"Candara";
+    -fx-text-fill: white;
+}

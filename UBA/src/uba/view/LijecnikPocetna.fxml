@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="994.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.LijecnikPocetnaController">
+    <stylesheets>
+        <URL value="@lijecnikpocetna.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="327.0" fitWidth="997.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+         <image>
+            <Image url="@images/tema.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="803.0" layoutY="286.0" prefHeight="130.0" prefWidth="124.0" styleClass="IzbornikKocka-Pane">
+         <children>
+            <Label layoutX="31.0" layoutY="79.0" prefHeight="33.0" prefWidth="68.0" styleClass="naslovLbl-Label" text="PACIJENTI" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="804.0" layoutY="118.0" prefHeight="130.0" prefWidth="124.0" styleClass="IzbornikKocka-Pane">
+         <children>
+            <Label layoutX="36.0" layoutY="55.0" prefHeight="33.0" prefWidth="52.0" styleClass="naslovLbl-Label" text="ZAKAŽI" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="naslovLbl1" layoutX="36.0" layoutY="88.0" prefHeight="33.0" prefWidth="52.0" styleClass="naslovLbl-Label" text="TERMIN" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="649.0" layoutY="286.0" prefHeight="130.0" prefWidth="124.0" styleClass="IzbornikKocka-Pane">
+         <children>
+            <Label layoutX="31.0" layoutY="73.0" prefHeight="39.0" prefWidth="68.0" styleClass="naslovLbl-Label" text="IZVJEŠĆE" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="643.0" layoutY="118.0" prefHeight="130.0" prefWidth="124.0" styleClass="IzbornikKocka-Pane">
+         <children>
+            <Label fx:id="naslovLbl" layoutX="31.0" layoutY="79.0" prefHeight="33.0" prefWidth="68.0" styleClass="naslovLbl-Label" text="PREGLEDI" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="trakaPane" layoutX="24.0" layoutY="93.0" prefHeight="61.0" prefWidth="560.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+      <AnchorPane id="" fx:id="AdminIzbornaTraka" minHeight="40.0" prefHeight="43.0" prefWidth="997.0" styleClass="LijecnikIzbornaTraka-AnchorPane">
+         <children>
+            <Button fx:id="odjaviseBtn" layoutX="921.0" layoutY="1.0" minHeight="17.999908447265625" mnemonicParsing="false" onAction="#odjavise" prefHeight="41.0" prefWidth="76.0" text="">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="31.50802057439631" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout1white.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="42.0" layoutY="55.0" prefHeight="81.0" prefWidth="85.0" styleClass="LijecnikIzbornaTraka-AnchorPane">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="54.0" layoutX="23.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/personalwhite.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="24.0" layoutY="160.0" prefHeight="263.0" prefViewportHeight="303.0" prefViewportWidth="558.0" prefWidth="553.0">
+         <content>
+            <TableView fx:id="ztID" layoutX="24.0" layoutY="160.0" prefHeight="263.0" prefWidth="551.0">
+              <columns>
+                  <TableColumn id="tableColumBoja" fx:id="obavljenoTbl" prefWidth="75.0" text="Obavljeno" />
+                <TableColumn fx:id="nazivTbl" prefWidth="75.0" text="Naslov" />
+                <TableColumn fx:id="vrstaTbl" prefWidth="95.0" text="Vrsta pregleda" />
+                  <TableColumn fx:id="datumTbl" prefWidth="75.0" text="Datum" />
+                  <TableColumn fx:id="vrijemeTbl" prefWidth="75.0" text="Vrijeme" />
+                  <TableColumn fx:id="lijecnikTbl" prefWidth="83.0" text="Liječnik" />
+                  <TableColumn fx:id="pacijentTbl" prefWidth="79.0" text="Pacijent" />
+                  <TableColumn fx:id="IDzt" prefWidth="75.0" text="Id" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="pregledaj" layoutX="670.0" layoutY="93.0" mnemonicParsing="false" onAction="#Pregledaj" prefHeight="68.0" prefWidth="68.0" text="">
+         <graphic>
+            <ImageView fitHeight="49.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pregledwhite.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="zakazi" layoutX="831.0" layoutY="93.0" mnemonicParsing="false" onAction="#Zakazi" prefHeight="68.0" prefWidth="68.0" text="">
+         <graphic>
+            <ImageView fitHeight="49.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/calendarzt.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="dodajIzv" layoutX="676.0" layoutY="261.0" mnemonicParsing="false" onAction="#DodajIzvjesce" prefHeight="68.0" prefWidth="68.0" text="">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/izvjescewhite.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="pacijentPregled" layoutX="830.0" layoutY="261.0" mnemonicParsing="false" onAction="#PacijentiPregled" prefHeight="68.0" prefWidth="68.0" text="">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/family.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="stanjeObavljeno" layoutX="24.0" layoutY="433.0" prefHeight="24.0" prefWidth="116.0" styleClass="stanjeObavljeno-Label" text="Stanje pregleda" />
+      <ComboBox fx:id="jeLiCB" layoutX="163.0" layoutY="433.0" prefWidth="150.0" />
+      <Button fx:id="updateBtn" layoutX="336.0" layoutY="433.0" mnemonicParsing="false" onAction="#azurirajObavljeno" prefHeight="24.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pencil-edit-button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="idlbl" layoutX="399.0" layoutY="434.0" prefHeight="24.0" prefWidth="39.0" styleClass="naslovLbl-Label" />
+   </children>
+</AnchorPane>

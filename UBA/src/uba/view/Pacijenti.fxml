@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="690.0" stylesheets="@osobljeview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.PacijentiController">
+   <children>
+      <AnchorPane fx:id="trakaPane" layoutX="14.0" layoutY="87.0" prefHeight="61.0" prefWidth="676.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+      <ImageView fitHeight="230.0" fitWidth="710.0" layoutX="2.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+         <image>
+            <Image url="@images/tema.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="" fx:id="AdminIzbornaTraka" minHeight="40.0" prefHeight="43.0" prefWidth="702.0" styleClass="AdminIzbornaTraka-AnchorPane">
+         <children>
+            <Button fx:id="nazadBtn" mnemonicParsing="false" onAction="#odbNazad" prefHeight="41.0" prefWidth="40.0" styleClass="AdminIzbornaTraka-AnchorPane" text="">
+               <graphic>
+                  <ImageView fitHeight="31.000003814697266" fitWidth="17.70000192377674" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/gobackwhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="27.0" layoutY="50.0" prefHeight="81.0" prefWidth="81.0" styleClass="AdminIzbornaTraka-AnchorPane">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="55.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/family.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="35.0" layoutY="165.0" prefViewportHeight="241.0" prefViewportWidth="595.0">
+         <content>
+            <TableView fx:id="pacijentiID" layoutX="35.0" layoutY="165.0" prefHeight="244.0" prefWidth="593.0">
+              <columns>
+                  <TableColumn fx:id="IDpacijent" prefWidth="22.0" text="ID" />
+                <TableColumn fx:id="ime" prefWidth="92.0" text="Ime" />
+                <TableColumn fx:id="prezime" prefWidth="111.0" text="Prezime" />
+                  <TableColumn fx:id="spol" prefWidth="75.0" text="Spol" />
+                  <TableColumn fx:id="telefon" prefWidth="75.0" text="Telefon" />
+                  <TableColumn fx:id="adresa" prefWidth="75.0" text="Adresa" />
+                  <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="datRodjenja" prefWidth="89.0" text="Datum rođenja" />
+                  <TableColumn fx:id="JMBG" prefWidth="61.0" text="JMBG" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

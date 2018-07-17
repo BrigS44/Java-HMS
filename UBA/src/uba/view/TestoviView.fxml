@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="243.0" prefWidth="466.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="uba.kontroler.TestoviViewController">
+    <stylesheets>
+        <URL value="@testoviview.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="145.0" prefWidth="466.0" styleClass="trakaPane-pane" stylesheets="@osobljeview.css">
+         <children>
+            <ImageView fitHeight="114.0" fitWidth="128.0" layoutX="176.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/confused.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextFlow layoutX="15.0" layoutY="175.0" prefHeight="37.0" prefWidth="437.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="442.0" text="OVAJ DIO APLIKACIJE NIJE REALIZIRAN I ČEKA IMPLEMENTACIJU!" textFill="#079185">
+               <font>
+                  <Font name="Candara Bold" size="15.5" />
+               </font>
+            </Label>
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

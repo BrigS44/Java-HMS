@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="800.0" stylesheets="@lijecnikpocetna.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uba.kontroler.MedSestraPocetnaController">
+   <children>
+      <ImageView fitHeight="289.0" fitWidth="874.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" styleClass="mainFxmlClass">
+         <image>
+            <Image url="@images/tema.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="672.0" layoutY="307.0" prefHeight="130.0" prefWidth="124.0" styleClass="IzbornikKocka-Pane">
+         <children>
+            <Label layoutX="31.0" layoutY="79.0" prefHeight="33.0" prefWidth="68.0" styleClass="naslovLbl-Label" text="PACIJENTI" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="673.0" layoutY="119.0" prefHeight="130.0" prefWidth="124.0" styleClass="IzbornikKocka-Pane">
+         <children>
+            <Label layoutX="36.0" layoutY="55.0" prefHeight="33.0" prefWidth="52.0" styleClass="naslovLbl-Label" text="ZAKAŽI" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="naslovLbl1" layoutX="36.0" layoutY="88.0" prefHeight="33.0" prefWidth="52.0" styleClass="naslovLbl-Label" text="TERMIN" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane id="" fx:id="AdminIzbornaTraka" minHeight="33.0" prefHeight="45.0" prefWidth="874.0" styleClass="LijecnikIzbornaTraka-AnchorPane">
+         <children>
+            <Button fx:id="odjaviseBtn" layoutX="798.0" layoutY="2.0" minHeight="17.999908447265625" mnemonicParsing="false" onAction="#odjavise" prefHeight="41.0" prefWidth="76.0" text="">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="31.50802057439631" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout1white.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trakaPane" layoutX="34.0" layoutY="103.0" prefHeight="61.0" prefWidth="560.0" styleClass="mainFxmlClass, backgorund, trakaPane-pane" />
+      <Pane layoutX="52.0" layoutY="65.0" prefHeight="81.0" prefWidth="85.0" styleClass="LijecnikIzbornaTraka-AnchorPane">
+         <children>
+            <ImageView fitHeight="61.0" fitWidth="62.0" layoutX="12.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/nurse.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="34.0" layoutY="178.0" prefHeight="275.0" prefViewportHeight="279.0" prefViewportWidth="554.0" prefWidth="560.0">
+         <content>
+            <TableView fx:id="ztID" layoutX="34.0" layoutY="178.0" prefHeight="280.0" prefWidth="554.0">
+              <columns>
+                <TableColumn fx:id="obavljenoTbl" prefWidth="75.0" text="Obavljeno" />
+                <TableColumn fx:id="nazivTbl" prefWidth="75.0" text="Naslov" />
+                  <TableColumn fx:id="vrstaTbl" prefWidth="108.0" text="Vrsta pregleda" />
+                  <TableColumn fx:id="datumTbl" prefWidth="75.0" text="Datum" />
+                  <TableColumn fx:id="vrijemeTbl" prefWidth="75.0" text="Vrijeme" />
+                  <TableColumn fx:id="lijecnikTbl" prefWidth="75.0" text="Liječnik" />
+                  <TableColumn fx:id="pacijentTbl" prefWidth="75.0" text="Pacijent" />
+                  <TableColumn fx:id="IDzt" prefWidth="75.0" text="id" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="zakazi" layoutX="700.0" layoutY="94.0" mnemonicParsing="false" onAction="#Zakazi" prefHeight="68.0" prefWidth="68.0" text="">
+         <graphic>
+            <ImageView fitHeight="49.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/calendarzt.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="pacijentPregled" layoutX="699.0" layoutY="282.0" mnemonicParsing="false" onAction="#PacijentiPregled" prefHeight="68.0" prefWidth="68.0" text="">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/family.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
