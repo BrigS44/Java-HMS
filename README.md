@@ -1,18 +1,18 @@
 # Java-HMS
 This is Hospital Managment System project. It was made as school project for a grade.
 
-** TECHNOLOGIES **
+__TECHNOLOGIES __
 
 * JAVA 8
 * MySQL DataBase
 * Scene Builder 2.0  
 
-** SCREENSHOTS OF HMS **
+__SCREENSHOTS OF HMS__
 
 Link to Drive : https://goo.gl/HmaQgF
 
-** Jar file - HMS **
+__Jar file - HMS__
 
-Link: https://goo.gl/B2yvLn
+Link:  https://goo.gl/B2yvLn
 
 
